@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://HPUCX.github.io</id>
+    <id>http://swjtu.coding.me/</id>
     <title>星移</title>
-    <updated>2019-10-30T15:09:54.792Z</updated>
+    <updated>2019-10-30T16:02:12.029Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://HPUCX.github.io"/>
-    <link rel="self" href="https://HPUCX.github.io/atom.xml"/>
+    <link rel="alternate" href="http://swjtu.coding.me/"/>
+    <link rel="self" href="http://swjtu.coding.me//atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://HPUCX.github.io/images/avatar.png</logo>
-    <icon>https://HPUCX.github.io/favicon.ico</icon>
+    <logo>http://swjtu.coding.me//images/avatar.png</logo>
+    <icon>http://swjtu.coding.me//favicon.ico</icon>
     <rights>All rights reserved 2019, 星移</rights>
     <entry>
         <title type="html"><![CDATA[VGE咖啡机使用教程]]></title>
-        <id>https://HPUCX.github.io/post/vge-ka-pei-ji-shi-yong-jiao-cheng</id>
-        <link href="https://HPUCX.github.io/post/vge-ka-pei-ji-shi-yong-jiao-cheng">
+        <id>http://swjtu.coding.me//post/vge-ka-pei-ji-shi-yong-jiao-cheng</id>
+        <link href="http://swjtu.coding.me//post/vge-ka-pei-ji-shi-yong-jiao-cheng">
         </link>
         <updated>2019-10-30T13:11:03.000Z</updated>
     </entry>

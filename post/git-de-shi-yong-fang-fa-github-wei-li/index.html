@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Git的使用方法(以GitHub为例) | 星移</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="http://swjtu.coding.me//favicon.ico?v=1572495314716">
+<link rel="shortcut icon" href="http://swjtu.coding.me//favicon.ico?v=1572509238659">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://swjtu.coding.me//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="http://swjtu.coding.me/">
-  <img class="avatar" src="http://swjtu.coding.me//images/avatar.png?v=1572495314716" alt="">
+  <img class="avatar" src="http://swjtu.coding.me//images/avatar.png?v=1572509238659" alt="">
   </a>
   <h1 class="site-title">
     星移
@@ -93,7 +93,7 @@
 <h3 id="git的安装">git的安装</h3>
 <p>在https://git-scm.com/上安装适合系统版本的git，我用的windows 64bit。</p>
 <h3 id="git的初始化">git的初始化</h3>
-<p>• 建立本地仓库，在项目文件夹下或指定文件夹下，右击调出git bash</p>
+<p>• 建立本地仓库，在项目文件夹下或指定文件夹下，右击调出git bash,进行初始化</p>
 <pre><code>`$git init`
 </code></pre>
 <p>• 设置账户名，即github的用户ID</p>
@@ -110,14 +110,18 @@
 <pre><code>$cd~/.ssh
 </code></pre>
 <p>如果没有生成过key，会提示<code>No such file or directory</code>。</p>
+<figure data-type="image" tabindex="1"><img src="http://swjtu.coding.me//post-images/1572508591140.png" alt=""></figure>
 <p>• 生成账户key</p>
 <pre><code>$ssh-keygen -t rsa -C&quot;123456@qq.com&quot;
 </code></pre>
-<p>• 此时会提示在哪个文件下保存key，使用默认回车。<br>
-• 此时会再提示设置密码，为了方便不设密码直接回车。<br>
-可以在命令行中看到key文件保存为地址，按照文件路径打开文件，复制其中所有文本。<br>
-• 在github个人设置中，找到SSH and GPG keys，选择新建SSH。将上面复制的文本粘贴至keys框中，title可随意设置，我设置的是PC名。<br>
-• 测试是否配置成功</p>
+<p>• 此时会提示在哪个文件下保存key，使用默认回车。</p>
+<p>• 此时会再提示设置密码，为了方便不设密码直接回车。</p>
+<p>可以在命令行中看到key文件保存为地址，按照文件路径打开文件，复制其中所有文本。<br>
+<img src="http://swjtu.coding.me//post-images/1572508698747.png" alt=""></p>
+<p>• 在github个人设置中，找到SSH and GPG keys，选择新建SSH。将上面复制的文本粘贴至keys框中，title可随意设置，我设置的是PC名。</p>
+<p><img src="http://swjtu.coding.me//post-images/1572508737194.png" alt=""><br>
+<img src="http://swjtu.coding.me//post-images/1572508743712.png" alt=""></p>
+<p>• 测试是否配置成功</p>
 <pre><code>$ssh -T git@github.com
 </code></pre>
 <p>此时会要求输入key密码，因为刚在没设置密码，密码就为空，然后输入yes。</p>
@@ -129,27 +133,35 @@
 <p>• 到此算配置完成，可测试是否连接正常</p>
 <pre><code>$ git commit -m &quot;first commit&quot;
 </code></pre>
+<figure data-type="image" tabindex="2"><img src="http://swjtu.coding.me//post-images/1572508780821.png" alt=""></figure>
 <h3 id="git的常规四步骤">git的常规四步骤</h3>
 <p>建议直接在磁盘中新建某文件夹，在文件夹内先进行完前面步骤后，再从远程仓库拉去代码，这样可防止本地也有代码时造成远程和本地有冲突。</p>
-<pre><code>//git远程仓库中想要拉取的分支
-$ git pull origin ZHANGSAN
-//将修改的内容全部保存
-$ git add .
-//提交commit，commit内写本次上传的修改内容
-$ git commit -m &quot;&quot;
-//将代码push到远程仓库
-$ git push origin cmt 
+<p>• git远程仓库中想要拉取的分支</p>
+<pre><code>$ git pull origin ZHANGSAN
+</code></pre>
+<p>• 将修改的内容全部保存</p>
+<pre><code>$ git add .
+</code></pre>
+<p>• 提交commit，commit内写本次上传的修改内容</p>
+<pre><code>$ git commit -m &quot;&quot;
+</code></pre>
+<p>• 将代码push到远程仓库</p>
+<pre><code>$ git push origin ZHANGSAN
 </code></pre>
 <h3 id="git中的其他使用方法与命令">git中的其他使用方法与命令</h3>
-<p>• 切换ssh与http<br>
-查看当前remote：<code>$ git remote -v</code><br>
-切换至http：<code>$ git remote set-url https://github.com/username/repository.git</code><br>
-在.git文件夹中找到config文件，将其中url替换成想要更改的地址。</p>
-<p>• 切换分支<br>
-使用vscode点击左下角分支名称(默认为master)，在输入框中选择分支切换。<br>
-git命令为<code>$ git checkout dev</code>（dev为分支名称）</p>
-<p>• 将远程覆盖本地<br>
-我是两台电脑上都写有一部分东西才想起来github托管，一台电脑上传的版本是最新的，直接拉取会有很多冲突，因为选择放弃本地working tree，远程直接覆盖本地。</p>
+<p><strong>切换ssh与http</strong><br>
+• 查看当前remote</p>
+<pre><code>$ git remote -v
+</code></pre>
+<p>• 切换至http</p>
+<pre><code>$ git remote set-url https://github.com/username/repository.git
+</code></pre>
+<p>• 还可以在.git文件夹中找到config文件，将其中url直接替换成想要更改的地址。</p>
+<p><strong>切换分支</strong><br>
+• 使用vscode点击左下角分支名称(默认为master)，在输入框中选择分支切换。强烈安利如果使用VSCODE IDE的话安装git easy 插件，省去很多敲命令行的工序，非常方便！</p>
+<p>• git命令为<code>$ git checkout dev</code>（dev为分支名称）</p>
+<p><strong>将远程覆盖本地</strong><br>
+• 我是两台电脑上都写有一部分东西才想起来github托管，一台电脑上传的版本是最新的，直接拉取会有很多冲突，因为选择放弃本地working tree，远程直接覆盖本地。</p>
 <pre><code>$ git reset --hard
 $ git fetch --all
 $ git pull

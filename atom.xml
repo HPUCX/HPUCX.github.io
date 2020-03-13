@@ -2,25 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://swjtu.coding.me/</id>
     <title>星移</title>
-    <updated>2019-10-31T09:23:26.010Z</updated>
+    <updated>2020-03-13T09:46:53.101Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://swjtu.coding.me/"/>
-    <link rel="self" href="http://swjtu.coding.me//atom.xml"/>
+    <link rel="self" href="http://swjtu.coding.me/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://swjtu.coding.me//images/avatar.png</logo>
-    <icon>http://swjtu.coding.me//favicon.ico</icon>
-    <rights>All rights reserved 2019, 星移</rights>
+    <logo>http://swjtu.coding.me/images/avatar.png</logo>
+    <icon>http://swjtu.coding.me/favicon.ico</icon>
+    <rights>All rights reserved 2020, 星移</rights>
     <entry>
-        <title type="html"><![CDATA[VGE咖啡机使用教程]]></title>
-        <id>http://swjtu.coding.me//post/vge-ka-pei-ji-shi-yong-jiao-cheng</id>
-        <link href="http://swjtu.coding.me//post/vge-ka-pei-ji-shi-yong-jiao-cheng">
+        <title type="html"><![CDATA[CMake的使用方法(PCL库为例)]]></title>
+        <id>http://swjtu.coding.me/post/blog0002/</id>
+        <link href="http://swjtu.coding.me/post/blog0002/">
         </link>
-        <updated>2019-10-30T13:11:03.000Z</updated>
+        <updated>2019-11-14T09:17:35.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git的使用方法(以GitHub为例)]]></title>
-        <id>http://swjtu.coding.me//post/git-de-shi-yong-fang-fa-github-wei-li</id>
-        <link href="http://swjtu.coding.me//post/git-de-shi-yong-fang-fa-github-wei-li">
+        <id>http://swjtu.coding.me/post/git-de-shi-yong-fang-fa-github-wei-li/</id>
+        <link href="http://swjtu.coding.me/post/git-de-shi-yong-fang-fa-github-wei-li/">
         </link>
         <updated>2019-10-22T03:45:35.000Z</updated>
     </entry>

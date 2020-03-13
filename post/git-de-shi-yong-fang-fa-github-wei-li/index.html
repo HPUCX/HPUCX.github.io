@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Git的使用方法(以GitHub为例) | 星移</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="http://swjtu.coding.me//favicon.ico?v=1572513803864">
+<link rel="shortcut icon" href="http://swjtu.coding.me//favicon.ico?v=1584092809641">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://swjtu.coding.me//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="http://swjtu.coding.me/">
-  <img class="avatar" src="http://swjtu.coding.me//images/avatar.png?v=1572513803864" alt="">
+  <img class="avatar" src="http://swjtu.coding.me//images/avatar.png?v=1584092809641" alt="">
   </a>
   <h1 class="site-title">
     星移
@@ -83,7 +83,7 @@
                 4 min read
               </span>
               
-                <a href="http://swjtu.coding.me//tag/VfZm7gJNa" class="post-tag">
+                <a href="http://swjtu.coding.me/tag/VfZm7gJNa/" class="post-tag">
                   # 前端开发笔记
                 </a>
               
@@ -117,17 +117,17 @@
 <pre><code>$cd~/.ssh
 </code></pre>
 <p>如果没有生成过key，会提示<code>No such file or directory</code>。</p>
-<figure data-type="image" tabindex="1"><img src="http://swjtu.coding.me//post-images/1572508591140.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://swjtu.coding.me//post-images/1572508591140.png" alt="" loading="lazy"></figure>
 <p>• 生成账户key</p>
 <pre><code>$ssh-keygen -t rsa -C&quot;123456@qq.com&quot;
 </code></pre>
 <p>• 此时会提示在哪个文件下保存key，使用默认回车。</p>
 <p>• 此时会再提示设置密码，为了方便不设密码直接回车。</p>
 <p>可以在命令行中看到key文件保存为地址，按照文件路径打开文件，复制其中所有文本。<br>
-<img src="http://swjtu.coding.me//post-images/1572508698747.png" alt=""></p>
+<img src="http://swjtu.coding.me//post-images/1572508698747.png" alt="" loading="lazy"></p>
 <p>• 在github个人设置中，找到SSH and GPG keys，选择新建SSH。将上面复制的文本粘贴至keys框中，title可随意设置，我设置的是PC名。</p>
-<p><img src="http://swjtu.coding.me//post-images/1572508737194.png" alt=""><br>
-<img src="http://swjtu.coding.me//post-images/1572508743712.png" alt=""></p>
+<p><img src="http://swjtu.coding.me//post-images/1572508737194.png" alt="" loading="lazy"><br>
+<img src="http://swjtu.coding.me//post-images/1572508743712.png" alt="" loading="lazy"></p>
 <p>• 测试是否配置成功</p>
 <pre><code>$ssh -T git@github.com
 </code></pre>
@@ -140,7 +140,7 @@
 <p>• 到此算配置完成，可测试是否连接正常</p>
 <pre><code>$ git commit -m &quot;first commit&quot;
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="http://swjtu.coding.me//post-images/1572508780821.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://swjtu.coding.me//post-images/1572508780821.png" alt="" loading="lazy"></figure>
 <h3 id="git的常规四步骤">git的常规四步骤</h3>
 <p>建议直接在磁盘中新建某文件夹，在文件夹内先进行完前面步骤后，再从远程仓库拉去代码，这样可防止本地也有代码时造成远程和本地有冲突。</p>
 <p>• git远程仓库中想要拉取的分支</p>

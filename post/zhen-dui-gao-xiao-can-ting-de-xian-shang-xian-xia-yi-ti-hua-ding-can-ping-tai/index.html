@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CMake的使用方法(PCL库为例) | 星移</title>
+<title>针对高校餐厅的线上线下一体化订餐平台 | 星移</title>
 <meta name="description" content="温故而知新" />
 <link rel="shortcut icon" href="http://swjtu.coding.me//favicon.ico?v=1584191170909">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -73,78 +73,27 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              CMake的使用方法(PCL库为例)
+              针对高校餐厅的线上线下一体化订餐平台
             </h2>
             <div class="post-info">
               <span>
-                2019-11-14
+                2020-03-14
               </span>
               <span>
-                3 min read
+                0 min read
               </span>
-              
-                <a href="http://swjtu.coding.me/tag/QVGVaghKp/" class="post-tag">
-                  # 点云处理
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="http://swjtu.coding.me//post-images/blog0002.png" alt="">
+              <img class="post-feature-image" src="http://swjtu.coding.me//post-images/zhen-dui-gao-xiao-can-ting-de-xian-shang-xian-xia-yi-ti-hua-ding-can-ping-tai.jpg" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p><strong>CMake与PCL库的安装方法略，本篇着重介绍CMake的使用方法</strong></p>
-</blockquote>
-<p>选择一个磁盘建立工程文件test，在test中建立一个test.cpp源文件和CMakeLists.txt文件</p>
-<figure data-type="image" tabindex="1"><img src="http://swjtu.coding.me//post-images/1584092418592.png" alt="" loading="lazy"></figure>
-<p>在test.cpp中输入以下代码：</p>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;pcl/point_cloud.h&gt;
-#include &lt;pcl/visualization/pcl_visualizer.h&gt;
-#include &lt;pcl/visualization/cloud_viewer.h&gt;
-#include &lt;pcl/console/parse.h&gt;
-#include &lt;pcl/io/pcd_io.h&gt;
-#include &lt;pcl/common/centroid.h&gt;
-int main()
-{
-    pcl::PointCloud&lt;pcl::PointXYZ&gt;::Ptr source_ori(new pcl::PointCloud&lt;pcl::PointXYZ&gt;);
-    if (pcl::io::loadPCDFile&lt;pcl::PointXYZ&gt;(&quot;bunny.pcd&quot;, *source_ori) == -1）
-    {
-       PCL_ERROR(&quot;Couldn't read file bunny.pcd \n&quot;);
-       return (-1);
-    }
-    std::cout &lt;&lt; &quot;Loaded&quot; &lt;&lt; source_ori-&gt;size() &lt;&lt; &quot;data points from bunny.pcd&quot; &lt;&lt; std::endl;
-
-    boost::shared_ptr&lt;pcl::visualization::PCLVisualizer&gt; viewer(new pcl::visualization::PCLVisualizer(&quot;3D Viewer&quot;));
-    viewer-&gt;setBackgroundColor(0, 0, 0);
-    pcl::visualization::PointCloudColorHandlerCustom&lt;pcl::PointXYZ&gt; source_color(source_ori, 255, 255, 255);
-    viewer-&gt;addPointCloud&lt;pcl::PointXYZ&gt;(source_ori,source_color,&quot;sample cloud&quot;)；
-    viewer-&gt;setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, &quot;sample cloud&quot;); // 设置点云大小
-    while (!viewer-&gt;wasStopped())
-    {
-        viewer-&gt;spinOnce(100);
-        boost::this_thread::sleep(boost::posix_time::microseconds(100000));
-    }
-    return 0;
-}
-</code></pre>
-<p>在CMakeLists.txt中输入一下内容：</p>
-<pre><code>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(test)
-find_package(PCL 1.4 REQUIRED)
-include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})  
-add_definitions(${PCL_DEFINITIONS})
-add_executable (test test.cpp)
-target_link_libraries (test ${PCL_LIBRARIES})
-</code></pre>
-<p>然后在test文件建中建立build（命名根据自己习惯）文件夹，然后打开cmake-gui,在Browse Source中找到test.cpp与CMakeLists.txt所在的文件夹,如下图所示。</p>
-<figure data-type="image" tabindex="2"><img src="http://swjtu.coding.me//post-images/1584092433058.png" alt="" loading="lazy"></figure>
-<p>路径选好后，点击configure,弹出编译器对话框，选择自己安装的编译器。</p>
-<p>完成后，需要再点击一次configure，camke中的红色内容消失，再点击generate，然后点击open project，再vs中删掉ALL_BUILD与ZERO_CHECK,对工程文件无影响，但是它们存在可能会编译出错，推荐删除，将pcl里bin中的OpenNI2.dll复制到Build中并添加bunny.pcd点云，然后在vs调试中点击开始执行（不调试）或ctrl+F5，会看到如下点云。说明安装配置成功。</p>
-<figure data-type="image" tabindex="3"><img src="http://swjtu.coding.me//post-images/1584092444336.png" alt="" loading="lazy"></figure>
-<p>通过cmake编译源码可以省去vs库目录等环境的配置，cmake自动从系统中找到所需要的静态库及动态库。使用此种方式学习PCL，你从此不用担心环境配置难题。</p>
+                <p><img src="http://swjtu.coding.me//post-images/1584189039677.jpg" alt="" loading="lazy"><br>
+<img src="http://swjtu.coding.me//post-images/1584189046668.jpg" alt="" loading="lazy"><br>
+<img src="http://swjtu.coding.me//post-images/1584189053091.jpg" alt="" loading="lazy"><br>
+<img src="http://swjtu.coding.me//post-images/1584189057869.jpg" alt="" loading="lazy"><br>
+<img src="http://swjtu.coding.me//post-images/1584189068602.jpg" alt="" loading="lazy"></p>
 
               </div>
               <div class="toc-container">
@@ -157,9 +106,9 @@ target_link_libraries (test ${PCL_LIBRARIES})
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="http://swjtu.coding.me/post/git-de-shi-yong-fang-fa-github-wei-li/">
+            <a href="http://swjtu.coding.me/post/blog0002/">
               <h3 class="post-title">
-                Git的使用方法(以GitHub为例)
+                CMake的使用方法(PCL库为例)
               </h3>
             </a>
           </div>

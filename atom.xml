@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://lrvn86.coding-pages.com</id>
+    <id>http://chenxi.coding-pages.com/</id>
     <title>星移</title>
-    <updated>2020-03-16T08:18:58.608Z</updated>
+    <updated>2020-03-16T08:36:35.377Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://lrvn86.coding-pages.com"/>
-    <link rel="self" href="http://lrvn86.coding-pages.com/atom.xml"/>
+    <link rel="alternate" href="http://chenxi.coding-pages.com/"/>
+    <link rel="self" href="http://chenxi.coding-pages.com/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://lrvn86.coding-pages.com/images/avatar.png</logo>
-    <icon>http://lrvn86.coding-pages.com/favicon.ico</icon>
+    <logo>http://chenxi.coding-pages.com/images/avatar.png</logo>
+    <icon>http://chenxi.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 星移</rights>
     <entry>
         <title type="html"><![CDATA[高校餐厅线上线下一体化订餐平台的设计与实现]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0003/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0003/">
+        <id>http://chenxi.coding-pages.com/post/0003/</id>
+        <link href="http://chenxi.coding-pages.com/post/0003/">
         </link>
         <updated>2020-03-14T12:30:05.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[CMake的使用方法(PCL库为例)]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0002/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0002/">
+        <id>http://chenxi.coding-pages.com/post/0002/</id>
+        <link href="http://chenxi.coding-pages.com/post/0002/">
         </link>
         <updated>2019-11-14T09:17:35.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git的使用方法(以GitHub为例)]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0001/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0001/">
+        <id>http://chenxi.coding-pages.com/post/0001/</id>
+        <link href="http://chenxi.coding-pages.com/post/0001/">
         </link>
         <updated>2019-10-22T03:45:35.000Z</updated>
     </entry>

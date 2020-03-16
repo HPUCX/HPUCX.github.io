@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://swjtu.coding.me/</id>
     <title>星移</title>
-    <updated>2020-03-14T13:10:30.233Z</updated>
+    <updated>2020-03-16T08:07:59.188Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://swjtu.coding.me/"/>
     <link rel="self" href="http://swjtu.coding.me/atom.xml"/>
@@ -11,23 +11,23 @@
     <icon>http://swjtu.coding.me/favicon.ico</icon>
     <rights>All rights reserved 2020, 星移</rights>
     <entry>
-        <title type="html"><![CDATA[高校餐厅的线上线下一体化订餐平台的设计与实现]]></title>
-        <id>http://swjtu.coding.me/post/zhen-dui-gao-xiao-can-ting-de-xian-shang-xian-xia-yi-ti-hua-ding-can-ping-tai/</id>
-        <link href="http://swjtu.coding.me/post/zhen-dui-gao-xiao-can-ting-de-xian-shang-xian-xia-yi-ti-hua-ding-can-ping-tai/">
+        <title type="html"><![CDATA[高校餐厅线上线下一体化订餐平台的设计与实现]]></title>
+        <id>http://swjtu.coding.me/post/0003/</id>
+        <link href="http://swjtu.coding.me/post/0003/">
         </link>
         <updated>2020-03-14T12:30:05.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[CMake的使用方法(PCL库为例)]]></title>
-        <id>http://swjtu.coding.me/post/blog0002/</id>
-        <link href="http://swjtu.coding.me/post/blog0002/">
+        <id>http://swjtu.coding.me/post/0002/</id>
+        <link href="http://swjtu.coding.me/post/0002/">
         </link>
         <updated>2019-11-14T09:17:35.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git的使用方法(以GitHub为例)]]></title>
-        <id>http://swjtu.coding.me/post/git-de-shi-yong-fang-fa-github-wei-li/</id>
-        <link href="http://swjtu.coding.me/post/git-de-shi-yong-fang-fa-github-wei-li/">
+        <id>http://swjtu.coding.me/post/0001/</id>
+        <link href="http://swjtu.coding.me/post/0001/">
         </link>
         <updated>2019-10-22T03:45:35.000Z</updated>
     </entry>

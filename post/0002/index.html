@@ -4,10 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CMake的使用方法(PCL库为例) | 星移</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="http://swjtu.coding.me//favicon.ico?v=1584346066635">
+<link rel="shortcut icon" href="http://lrvn86.coding-pages.com/favicon.ico?v=1584346737250">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="http://swjtu.coding.me//styles/main.css">
+<link rel="stylesheet" href="http://lrvn86.coding-pages.com/styles/main.css">
 
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -19,8 +19,8 @@
     <div class="main">
       <div class="main-content">
         <div class="site-header">
-  <a href="http://swjtu.coding.me/">
-  <img class="avatar" src="http://swjtu.coding.me//images/avatar.png?v=1584346066635" alt="">
+  <a href="http://lrvn86.coding-pages.com">
+  <img class="avatar" src="http://lrvn86.coding-pages.com/images/avatar.png?v=1584346737250" alt="">
   </a>
   <h1 class="site-title">
     星移
@@ -83,13 +83,13 @@
                 3 min read
               </span>
               
-                <a href="http://swjtu.coding.me/tag/QVGVaghKp/" class="post-tag">
+                <a href="http://lrvn86.coding-pages.com/tag/QVGVaghKp/" class="post-tag">
                   # 点云处理
                 </a>
               
             </div>
             
-              <img class="post-feature-image" src="http://swjtu.coding.me//post-images/0002.png" alt="">
+              <img class="post-feature-image" src="http://lrvn86.coding-pages.com/post-images/0002.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
@@ -97,7 +97,7 @@
 <p><strong>CMake与PCL库的安装方法略，本篇着重介绍CMake的使用方法</strong></p>
 </blockquote>
 <p>选择一个磁盘建立工程文件test，在test中建立一个test.cpp源文件和CMakeLists.txt文件</p>
-<figure data-type="image" tabindex="1"><img src="http://swjtu.coding.me//post-images/1584092418592.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://lrvn86.coding-pages.com/post-images/1584092418592.png" alt="" loading="lazy"></figure>
 <p>在test.cpp中输入以下代码：</p>
 <pre><code>#include &lt;iostream&gt;
 #include &lt;pcl/point_cloud.h&gt;
@@ -140,10 +140,10 @@ add_executable (test test.cpp)
 target_link_libraries (test ${PCL_LIBRARIES})
 </code></pre>
 <p>然后在test文件建中建立build（命名根据自己习惯）文件夹，然后打开cmake-gui,在Browse Source中找到test.cpp与CMakeLists.txt所在的文件夹,如下图所示。</p>
-<figure data-type="image" tabindex="2"><img src="http://swjtu.coding.me//post-images/1584092433058.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://lrvn86.coding-pages.com/post-images/1584092433058.png" alt="" loading="lazy"></figure>
 <p>路径选好后，点击configure,弹出编译器对话框，选择自己安装的编译器。</p>
 <p>完成后，需要再点击一次configure，camke中的红色内容消失，再点击generate，然后点击open project，再vs中删掉ALL_BUILD与ZERO_CHECK,对工程文件无影响，但是它们存在可能会编译出错，推荐删除，将pcl里bin中的OpenNI2.dll复制到Build中并添加bunny.pcd点云，然后在vs调试中点击开始执行（不调试）或ctrl+F5，会看到如下点云。说明安装配置成功。</p>
-<figure data-type="image" tabindex="3"><img src="http://swjtu.coding.me//post-images/1584092444336.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://lrvn86.coding-pages.com/post-images/1584092444336.png" alt="" loading="lazy"></figure>
 <p>通过cmake编译源码可以省去vs库目录等环境的配置，cmake自动从系统中找到所需要的静态库及动态库。使用此种方式学习PCL，你从此不用担心环境配置难题。</p>
 
               </div>
@@ -157,7 +157,7 @@ target_link_libraries (test ${PCL_LIBRARIES})
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="http://swjtu.coding.me/post/0001/">
+            <a href="http://lrvn86.coding-pages.com/post/0001/">
               <h3 class="post-title">
                 Git的使用方法(以GitHub为例)
               </h3>
@@ -195,7 +195,7 @@ target_link_libraries (test ${PCL_LIBRARIES})
 
         <div class="site-footer">
   Powered by <a href="https://github.com/HPUCX" >HPU_CX</a> | 
-  <a class="rss" href="http://swjtu.coding.me//atom.xml" target="_blank">RSS</a>
+  <a class="rss" href="http://lrvn86.coding-pages.com/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>

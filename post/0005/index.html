@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CMake的使用方法(PCL库为例) | 星移</title>
+<title>利用空间量算采集点位 | 星移</title>
 <meta name="description" content="温故而知新" />
 <link rel="shortcut icon" href="http://lrvn86.coding-pages.com//favicon.ico?v=1584455204277">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -73,78 +73,99 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              CMake的使用方法(PCL库为例)
+              利用空间量算采集点位
             </h2>
             <div class="post-info">
               <span>
-                2019-11-14
+                2019-09-10
               </span>
               <span>
                 3 min read
               </span>
               
-                <a href="http://lrvn86.coding-pages.com/tag/QVGVaghKp/" class="post-tag">
-                  # 点云处理
+                <a href="http://lrvn86.coding-pages.com/tag/VfZm7gJNa/" class="post-tag">
+                  # 前端开发笔记
                 </a>
               
             </div>
             
-              <img class="post-feature-image" src="http://lrvn86.coding-pages.com//post-images/0002.png" alt="">
+              <img class="post-feature-image" src="http://lrvn86.coding-pages.com//post-images/0005.jpg" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p><strong>CMake与PCL库的安装方法略，本篇着重介绍CMake的使用方法</strong></p>
-</blockquote>
-<p>选择一个磁盘建立工程文件test，在test中建立一个test.cpp源文件和CMakeLists.txt文件</p>
-<figure data-type="image" tabindex="1"><img src="http://lrvn86.coding-pages.com//post-images/1584092418592.png" alt="" loading="lazy"></figure>
-<p>在test.cpp中输入以下代码：</p>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;pcl/point_cloud.h&gt;
-#include &lt;pcl/visualization/pcl_visualizer.h&gt;
-#include &lt;pcl/visualization/cloud_viewer.h&gt;
-#include &lt;pcl/console/parse.h&gt;
-#include &lt;pcl/io/pcd_io.h&gt;
-#include &lt;pcl/common/centroid.h&gt;
-int main()
-{
-    pcl::PointCloud&lt;pcl::PointXYZ&gt;::Ptr source_ori(new pcl::PointCloud&lt;pcl::PointXYZ&gt;);
-    if (pcl::io::loadPCDFile&lt;pcl::PointXYZ&gt;(&quot;bunny.pcd&quot;, *source_ori) == -1）
-    {
-       PCL_ERROR(&quot;Couldn't read file bunny.pcd \n&quot;);
-       return (-1);
-    }
-    std::cout &lt;&lt; &quot;Loaded&quot; &lt;&lt; source_ori-&gt;size() &lt;&lt; &quot;data points from bunny.pcd&quot; &lt;&lt; std::endl;
-
-    boost::shared_ptr&lt;pcl::visualization::PCLVisualizer&gt; viewer(new pcl::visualization::PCLVisualizer(&quot;3D Viewer&quot;));
-    viewer-&gt;setBackgroundColor(0, 0, 0);
-    pcl::visualization::PointCloudColorHandlerCustom&lt;pcl::PointXYZ&gt; source_color(source_ori, 255, 255, 255);
-    viewer-&gt;addPointCloud&lt;pcl::PointXYZ&gt;(source_ori,source_color,&quot;sample cloud&quot;)；
-    viewer-&gt;setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, &quot;sample cloud&quot;); // 设置点云大小
-    while (!viewer-&gt;wasStopped())
-    {
-        viewer-&gt;spinOnce(100);
-        boost::this_thread::sleep(boost::posix_time::microseconds(100000));
-    }
-    return 0;
-}
+                <p>在高亮建筑物模型的一层或者房间时，为了便于后续进行属性查询或其他操作，需要先采集点位制作头文件以方便调用读取。</p>
+<p>在double click时，添加如下代码:</p>
+<pre><code>for(var i = 0; i &lt;=positions.length; ++i){
+                let cartographic = Cesium.Cartographic.fromCartesian(positions[i]);
+                var lon = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6);
+                var lat = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6);
+                // var hei = cartographic.height;
+                // console.log('position'+i+':'+lon+','+lat);
+                console.log(lon+','+lat+',');
+            }
 </code></pre>
-<p>在CMakeLists.txt中输入一下内容：</p>
-<pre><code>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(test)
-find_package(PCL 1.4 REQUIRED)
-include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})  
-add_definitions(${PCL_DEFINITIONS})
-add_executable (test test.cpp)
-target_link_libraries (test ${PCL_LIBRARIES})
+<p>再添加生成多边形体的代码：</p>
+<pre><code>Test(viewer,handler){
+        viewer.cesiumWidget.screenSpaceEventHandler.removeInputAction(Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK);
+        handler = new Cesium.ScreenSpaceEventHandler(viewer.scene._imageryLayerCollection);
+        var floor = viewer.entities.add({
+                name : 'hongzhezhai6',
+                polygon : {
+                hierarchy : Cesium.Cartesian3.fromDegreesArray([
+                103.983064,30.765185,103.982904,30.765209,103.982871,30.765071,103.982721,30.765096,103.982749,30.765218,103.982769,30.765227,103.982775,30.765250,103.982746,30.765255,103.982728,30.765240,103.982590,30.765264,103.982588,30.765264,103.982619,30.765395,103.982749,30.765373,103.982750,30.765375,103.982782,30.765371,103.982814,30.765510,103.982963,30.765484,103.982937,30.765363,103.982916,30.765353,103.982913,30.765344,103.983096,30.765314]),
+                height : 497.98,
+                extrudedHeight : 500.81,
+                material : Cesium.Color.RED.withAlpha(0.5)
+            }
+          });
+        var room1 = viewer.entities.add({
+        name : 'hongzhezhai7',
+        polygon : {
+            hierarchy : Cesium.Cartesian3.fromDegreesArray([
+                103.982618,30.765925,103.982611,30.765896,103.982554,30.765904,103.982563,30.765935]),
+            height : 497.98,
+            extrudedHeight : 500.81,
+            material : Cesium.Color.RED.withAlpha(0.5)
+        }
+        });
+        var room2 = viewer.entities.add({
+            name : 'hongzhezhai7',
+            polygon : {
+                hierarchy : Cesium.Cartesian3.fromDegreesArray([
+                    103.982611,30.765896,103.982604,30.765866,103.982548,30.765875,103.982554,30.765904]),
+                height : 497.98,
+                extrudedHeight : 500.81,
+                material : Cesium.Color.GOLD.withAlpha(0.5)
+            }
+        });
+        var room3 = viewer.entities.add({
+            name : 'hongzhezhai7',
+            polygon : {
+                hierarchy : Cesium.Cartesian3.fromDegreesArray([
+                    103.982604,30.765866,103.982597,30.765836,103.982542,30.765847,103.982548,30.765875]),
+                height : 497.98,
+                extrudedHeight : 500.81,
+                material : Cesium.Color.DODGERBLUE.withAlpha(0.5)
+            }
+        });
+        var room4 = viewer.entities.add({
+            name : 'hongzhezhai7',
+            polygon : {
+                hierarchy : Cesium.Cartesian3.fromDegreesArray([
+                    103.982597,30.765836,103.982591,30.765809,103.982534,30.765818,103.982542,30.765847]),
+                height : 497.98,
+                extrudedHeight : 500.81,
+                material : Cesium.Color.LIGHTSEAGREEN.withAlpha(0.5)
+            }
+        });
+          
+          viewer.zoomTo(floor);
+    }
 </code></pre>
-<p>然后在test文件建中建立build（命名根据自己习惯）文件夹，然后打开cmake-gui,在Browse Source中找到test.cpp与CMakeLists.txt所在的文件夹,如下图所示。</p>
-<figure data-type="image" tabindex="2"><img src="http://lrvn86.coding-pages.com//post-images/1584092433058.png" alt="" loading="lazy"></figure>
-<p>路径选好后，点击configure,弹出编译器对话框，选择自己安装的编译器。</p>
-<p>完成后，需要再点击一次configure，camke中的红色内容消失，再点击generate，然后点击open project，再vs中删掉ALL_BUILD与ZERO_CHECK,对工程文件无影响，但是它们存在可能会编译出错，推荐删除，将pcl里bin中的OpenNI2.dll复制到Build中并添加bunny.pcd点云，然后在vs调试中点击开始执行（不调试）或ctrl+F5，会看到如下点云。说明安装配置成功。</p>
-<figure data-type="image" tabindex="3"><img src="http://lrvn86.coding-pages.com//post-images/1584092444336.png" alt="" loading="lazy"></figure>
-<p>通过cmake编译源码可以省去vs库目录等环境的配置，cmake自动从系统中找到所需要的静态库及动态库。使用此种方式学习PCL，你从此不用担心环境配置难题。</p>
+<p>效果如下：<br>
+<img src="http://lrvn86.coding-pages.com//post-images/1584446233252.png" alt="" loading="lazy"><br>
+<img src="http://lrvn86.coding-pages.com//post-images/1584446237261.png" alt="" loading="lazy"><br>
+需要注意的是，对于粗模，在选点勾勒外轮廓时，尽量超出建筑物边界点一定距离，防止窗户或凸起破坏绘制立方体的完整性。</p>
 
               </div>
               <div class="toc-container">
@@ -157,9 +178,9 @@ target_link_libraries (test ${PCL_LIBRARIES})
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="http://lrvn86.coding-pages.com/post/0001/">
+            <a href="http://lrvn86.coding-pages.com/post/0003/">
               <h3 class="post-title">
-                Git的使用方法(以GitHub为例)
+                高校餐厅线上线下一体化订餐平台的设计与实现
               </h3>
             </a>
           </div>

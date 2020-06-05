@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://lrvn86.coding-pages.com/</id>
+    <id>https://HPUCX.github.io</id>
     <title>星移</title>
-    <updated>2020-03-17T14:26:53.893Z</updated>
+    <updated>2020-06-05T08:31:39.665Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://lrvn86.coding-pages.com/"/>
-    <link rel="self" href="http://lrvn86.coding-pages.com/atom.xml"/>
+    <link rel="alternate" href="https://HPUCX.github.io"/>
+    <link rel="self" href="https://HPUCX.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://lrvn86.coding-pages.com/images/avatar.png</logo>
-    <icon>http://lrvn86.coding-pages.com/favicon.ico</icon>
+    <logo>https://HPUCX.github.io/images/avatar.png</logo>
+    <icon>https://HPUCX.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 星移</rights>
     <entry>
         <title type="html"><![CDATA[CMake的使用方法(PCL库为例)]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0002/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0002/">
+        <id>https://HPUCX.github.io/post/0002/</id>
+        <link href="https://HPUCX.github.io/post/0002/">
         </link>
         <updated>2019-11-14T09:17:35.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git的使用方法(以GitHub为例)]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0001/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0001/">
+        <id>https://HPUCX.github.io/post/0001/</id>
+        <link href="https://HPUCX.github.io/post/0001/">
         </link>
         <updated>2019-10-22T03:45:35.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[利用空间量算采集点位]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0005/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0005/">
+        <id>https://HPUCX.github.io/post/0005/</id>
+        <link href="https://HPUCX.github.io/post/0005/">
         </link>
         <updated>2019-09-10T11:55:27.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[高校餐厅线上线下一体化订餐平台的设计与实现]]></title>
-        <id>http://lrvn86.coding-pages.com/post/0003/</id>
-        <link href="http://lrvn86.coding-pages.com/post/0003/">
+        <id>https://HPUCX.github.io/post/0003/</id>
+        <link href="https://HPUCX.github.io/post/0003/">
         </link>
         <updated>2019-08-16T12:30:05.000Z</updated>
     </entry>
